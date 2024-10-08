@@ -17,8 +17,8 @@ function streamGenerator(button) {
     var result = []
 
     for (let i = 0; i < totalNotes / 2; i++) {
-        const leftNoteLane = random(1, sideLength)
-        const rightNoteLane = random(1, sideLength) + 6
+        const leftNoteLane = randomInt(1, sideLength)
+        const rightNoteLane = randomInt(1, sideLength) + 6
         result.push({ width: noteWidth, lane: leftNoteLane })
         result.push({ width: noteWidth, lane: rightNoteLane })
     }
@@ -27,6 +27,8 @@ function streamGenerator(button) {
     return result
 }
 
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
+function randomInt(min, max) {
+    let maxF = Math.floor(max)
+    let minC = Math.ceil(min)
+    return Math.floor(Math.random() * (maxF - minC)) + min
 }

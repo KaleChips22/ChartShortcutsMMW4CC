@@ -32,5 +32,5 @@ function streamGenerator(button) {
 function randomInt(min, max) {
     let maxF = Math.floor(max)
     let minC = Math.ceil(min)
-    return Math.floor(Math.random() * (maxF - minC)) + min
+    return Math.random() * (maxF - minC) + min
 }
